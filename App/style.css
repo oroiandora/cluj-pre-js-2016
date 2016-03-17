@@ -2,24 +2,27 @@
   overflow:auto;
 }
 
+#section3{
+  overflow:auto;
+}
+
 
 #formular2{
   font-family:"Arial";
   border: 1px solid white;
-
-
   background-color: white;
   border-radius: 2px;
-  float: right;
-  margin: 10px 300px 10px 100px;
-
-
+  float:right;
+  margin-right: 5%;
+  margin-top: 10px;
+  display:inline-block;
 }
 
 #startup{
-  padding-left:350px;
+  padding-left:10%;
   padding-top:50px;
   float: left;
+  display:inline-block;
 }
 
 
@@ -211,18 +214,46 @@ tr{
   border-style:solid;
   border-bottom-color:white;
 }
-
-
-#phone{
-  margin-top:60px;
-  margin-right:600px;
-  margin-left:600px;
-  margin-bottom:300px;
+.phone {
+  float: left;
+  margin-left: 25%;
+  margin-top: 120px;
 }
 
-#music{
-  margin-top:90px;
-  margin-right:800px;
-  margin-left:400px;
-  margin-bottom:300px;
+.music {
+  float: left;
+  margin-left: 15%;
+  margin-top: 70px;
+}
+
+.weather {
+  float: left;
+  margin-left: 7%;
+  margin-top: 100px;
+}
+.time {
+  float: left;
+  margin-left: 27%;
+  margin-top: 30px;
+}
+.location {
+  float: left;
+  margin-left: 5%;
+  margin-top: 0px;
+}
+.text {
+  float: left;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+.photo {
+  float: left;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+
+.mail {
+  float: left;
+  margin-left: 3%;
+  margin-top: 10px;
 }
