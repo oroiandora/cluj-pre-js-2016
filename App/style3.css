@@ -15,10 +15,10 @@ input[type=text] {
     background-image: url('../core/assets/search-icon.png');
     background-position: 15px 12px;
     background-repeat: no-repeat;
-    padding-left: 500px;
+    padding-left: 70%;
     padding-top: 15px;
     padding-bottom:15px;
-    margin-right: 5%;
+    margin-right: 15%;
     margin-top: 10px;
     border-radius: 2px;
     border:none;
@@ -56,7 +56,7 @@ input[type=submit]{
   display: inline-block;
   vertical-align: top;
   padding-top:40px;
-  padding-left:300px;
+  padding-left:10%;
 }
 
 #signin{
@@ -66,8 +66,8 @@ input[type=submit]{
   border: none;
   display: inline-block;
   vertical-align: top;
-  padding-top:40px;
-  padding-left:110px;
+  padding-top:55px;
+  padding-left:5%;
   padding-bottom: 20px;
 }
 
@@ -101,7 +101,7 @@ h5{
 }
 
 
-#join{
+#join input[type=button]{
   width: 200px;
   height: 10px;
   box-sizing: border-box;
@@ -111,6 +111,7 @@ h5{
   padding-top:40px;
   padding-left:110px;
   padding-bottom: 20px;
+
 
 }
 
@@ -123,21 +124,24 @@ h5{
   float:left;
   margin-right: 25px;
   margin-top: -200px;
-  margin-left: 350px;
+  margin-left: 12%;
   display:inline-block;
   transition: margin-top 1s;
+  position: absolute;
+  overflow:hidden;
 
 }
 
 #hits:hover{
   margin-top: -250px;
   visibility: visible;
+  opacity: 0.7;
+  filter: alpha(opacity=30);
 }
 
 
 
-
-#upallnight input[type=button]{
+#night{
   font-family:"Arial";
   border: none;
   background-color: white;
@@ -145,38 +149,79 @@ h5{
   float:left;
   margin-right: 25px;
   margin-top: -200px;
+  margin-left: 40%;
   display:inline-block;
   transition: margin-top 1s;
-
+  position: absolute;
+  overflow:hidden;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
-#upallnight:hover input[type=button]{
-  margin-top:-250px;
+#night:hover {
+  margin-top: -250px;
+  visibility: visible;
+  opacity: 0.7;
+  filter: alpha(opacity=30);
+}
+
+#djmix{
+  font-family:"Arial";
+  border: none;
+  background-color: white;
+  border-radius: 2px;
+  float:left;
+  margin-right: 25px;
+  margin-top: -200px;
+  margin-left: 68%;
+  display:inline-block;
+  transition: margin-top 1s;
+  position: absolute;
+  overflow:hidden;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#djmix:hover{
+  margin-top: -250px;
+  visibility: visible;
+  opacity: 0.7;
+  filter: alpha(opacity=30);
+}
+
+
+#hits input{
+  visibility: hidden;
+}
+
+#hits:hover input{
+  visibility:visible;
+}
+
+#night input{
+  visibility: hidden;
+}
+
+#night:hover input{
+  visibility:visible;
+}
+
+#djmix input{
+  visibility: hidden;
+}
+
+#djmix:hover input{
   visibility:visible;
 }
 
 
-#mixes{
-  font-family:"Arial";
-  border: none;
-  background-color: white;
-  border-radius: 2px;
-  float:left;
-  margin-right: 25px;
-  margin-top: -200px;
-  display:inline-block;
-  transition: margin-top 1s;
 
-}
 
-#mixes:hover input[type=button]{
-  margin-top: -250px;
-  visibility: visible;
 
-}
 
 input[type=button]{
-  visibility: hidden;
+
+
   color: white;
   font-weight: bold;
   border: #0099ff;
@@ -184,8 +229,39 @@ input[type=button]{
   padding: 10px 25px;
   background-color: #0099ff;
   width: 150px;
-  transition: visibility 1000s;
+  margin-top:-250px;
+  margin-left: 125px;
+
 }
+
+
+
+
+
+
+
+
+#playlist {
+    width: 400px;
+    margin-top: 0px;
+    border: none;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    height: 600px;
+    transition: margin-top 2s;
+    background-color:white;
+    visibility: hidden;
+
+}
+
+
+input:hover #playlist {
+    visibility: visible;
+}
+
+
 
 
 

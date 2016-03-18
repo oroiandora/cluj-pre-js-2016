@@ -34,8 +34,8 @@
     <h5>Get Started Absolutely FREE</h5>
     <h6>NO CREDIT CARD NEEDED</h6>
     <form>
-      <span>Your name</span><br>
-      <input type="text" name="name" required><br><br>
+      <label>Your name</label><br>
+      <input type="text" id="id" name="name" required><br><br>
       <label>Email</label><br>
       <input type="email" name="email" required><br><br>
       <label>Password</label><br>
@@ -164,14 +164,17 @@
            <td></td>
            <td><img src="../core/assets/check-icon.png"></td>
          </tr>
-         <table>
+       </table>
 
 
-       <div id="button">
-        <input type="submit" value="Sign up free">
+
+      <div id="signupfree">
+        <button onclick="goOnTop()">Sign up free</button>
       </div>
 
+</div>
 
 
+  <script src="signup.js"></script>
  </body>
 </html>

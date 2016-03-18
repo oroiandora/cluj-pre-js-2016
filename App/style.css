@@ -162,12 +162,17 @@ form{
   padding-top:50px;
 }
 
-#button{
-  padding-top:30px;
-  padding-bottom:50px;
-  text-align:center;
-  padding-left:700px;
-  padding-right:700px;
+#signupfree{
+    padding-top:30px;
+    padding-bottom:50px;
+    text-align:center;
+    padding-left:700px;
+    padding-right:700px;
+    color: blue;
+    font-weight: bold;
+    border: #0099ff;
+
+
 }
 
 

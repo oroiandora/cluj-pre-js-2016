@@ -4,6 +4,7 @@
   <link rel="stylesheet" type="text/css" href="style3.css">
 </head>
 <body>
+  <script src="signup.js"></script>
   <div id="top">
 
     <div id="logo">
@@ -21,6 +22,8 @@
 
 
 
+
+
     <div id="middle">
 
         <h3>Ready to listen to endless music<br>on your favourite device?</h2>
@@ -34,29 +37,55 @@
   </div>
 
     <div id="container">
-      <div id="hits" style="z-index: -1">
+      <div id="hits">
         <img src="../core/assets/massive-pop-hits.png">
         <h2>Massive pop hits vol 1</h2>
         <h5>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do elusmod tempor incididunt ut labore et</h5>
-        <input type="button" value="Explore playlist">
+        <input onclick="unhidePlaylist()" type="button" value="Explore playlist">
       </div>
 
-      <div id="upallnight">
+
+      <div id="night">
         <img src="../core/assets/up-all-night.png">
-        <h2>Up all night</h2>
-        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do elusmod tempor incididunt ut labore et</h5>
-        <input type="button" value="Explore playlist">
-      </div>
-
-      <div id="mixes">
-        <img src="../core/assets/dj-killer-mixes.png">
-        <h2>DJ killer mixes</h2>
-        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do elusmod tempor incididunt ut labore et</h5>
+       <h2>Up all night</h2>
+       <h5>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do elusmod tempor incididunt ut labore et</h5>
       <input type="button" value="Explore playlist">
       </div>
-    </div>
+
+
+      <div id="djmix">
+        <img src="../core/assets/dj-killer-mixes.png">
+          <h2>DJ killer mixes</h2>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit, sed do elusmod tempor incididunt ut labore et</h5>
+          <input onclick="goToPlaylist" type="button" value="Explore playlist">
+        </div>
+
+
       <div class="bottom">
+        <div id="playlist">
+          <br><br><br><br><br><br><br>
+          <div id="header">
+            <input onclick="closePlaylist()" type="button" value="Close">
+            <br><br><br><br><br><br><br>
+
+          </div>
+          <div id="content">
+            <br><br><br><br><br><br><br>
+          </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
+
+
+
+
+
+
+
+
+
+
 
       <p> 2016 ACME DIVISION. ALL RIGHTS RESERVED</p>
     </div>
@@ -66,5 +95,6 @@
 
 
   </div>
+
 </body>
 </html>
