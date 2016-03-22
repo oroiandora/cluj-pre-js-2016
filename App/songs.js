@@ -29,6 +29,7 @@ function Song(path){
 
   }
 
+
   Song.prototype.getSongTitle(){
     return this.songTitle;
   }
@@ -39,6 +40,7 @@ function Song(path){
 
   Song.prototype.getSongLength(){
     return this.songLength;
+
   }
 
   Song.prototype.playCount(){
