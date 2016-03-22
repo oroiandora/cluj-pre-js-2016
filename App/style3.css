@@ -242,14 +242,14 @@ input[type=button]{
 
 
 #playlist {
-    width: 400px;
+    width: 600px;
     margin-top: 0px;
     border: none;
     border-radius: 2px;
     position: fixed;
     bottom: 0;
     left: 50px;
-    height: 600px;
+    height: 700px;
     transition: margin-top 2s;
     background-color:white;
     visibility: hidden;
@@ -261,10 +261,24 @@ input:hover #playlist {
     visibility: visible;
 }
 
+#playlist{
+  padding-top:15px;
+}
+
 #header{
-  background-color: grey;
-  padding-top:5px;
-  padding-bottom:100px;
+  width: 100%;
+  background-color: #f5f5ef;
+
+}
+
+#image{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#playingfrom{
+  display: inline-block;
+  vertical-align: top;
 }
 
 
