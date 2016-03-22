@@ -3,20 +3,8 @@ function buildDomain() {
    for( var i = 0; i < playlistFromParse.length; i++ ) {
       playlist.push( new Playlist(playlistFromParse[i]) );
    }
+
 }
-
-function unhidePlaylist(){
-
-    document.getElementById("playlist").style.visibility = "visible";
-    console.log(JSON.parse);
-    var currentPlaylist = new Playlist();
-
-    for(var i = 0; i <= playlistFromParse[0].songs[i].length; i++){
-      var song = new Song(playlistFromParse[0].songs[i]);
-      console.log(songs);
-
-      }
-    }
 
 function Song(path){
   this.image = path.image;
@@ -24,37 +12,56 @@ function Song(path){
   this.songAuthor = path.songAuthor;
   this.songLength = path.songLength;
   this.songListened = path.songListened;
+}
 
-
-
-  }
-
-
-  Song.prototype.getSongTitle(){
+  Song.prototype.getSongTitle = function(){
     return this.songTitle;
   }
 
-  Song.prototype.getSongAuthor(){
+  Song.prototype.getSongAuthor = function(){
     return this.songAuthor;
   }
 
-  Song.prototype.getSongLength(){
+  Song.prototype.getSongLength = function(){
     return this.songLength;
 
   }
 
-  Song.prototype.playCount(){
+  Song.prototype.getSongListened = function(){
+    return this.songListened;
+  }
+
+  Song.prototype.getImage = function(){
+    return this.image;
+  }
+
+  Song.prototype.setSongTitle = function(title){
+    this.songTitle = name;
+  }
+
+  Song.prototype.setSongAuthor = function(author){
+    this.songAuthor = author;
+  }
+
+  Song.prototype.setSongLength = function(length){
+    this.songLength = length;
+  }
+
+  Song.prototype.setSongListened = function(listening){
+    this.songListened = listening;
+  }
+
+  Song.prototype.setImage = function(songImage){
+    this.image = songImage;
+  }
+
+
+
+
+
+  /*Song.prototype.playCount(){
     playCount = 0;
     for( var i=0; i<=songLength[0].songs[i].length; i++){
       playCount= songLength[i] + songLength[i+1];
     }
-  }
-
-};
-
-
-
-
-function closePlaylist(){
-    document.getElementById("playlist").style.visibility = "hidden";
-}
+  }*/
