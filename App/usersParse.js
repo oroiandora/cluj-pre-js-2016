@@ -1,34 +1,35 @@
 var usersFromParse = JSON.parse(usersJSON);
-for(var i = 0; i<=usersFromParse.length; i++){
-
-}
+console.log(usersJSON);
+// for(var i = 0; i<=usersFromParse.length; i++){
+//
+// }
 
 function Users(path){
-  this.userName = userName;
-  this.email = email;
-  this.password = passowrd;
+  this.userName = path.userName;
+  this.email = path.email;
+  this.password = path.passowrd;
 }
 
-Users.prototype.getUserName(){
+Users.prototype.getUserName = function(){
   return userName;
 }
 
-Users.prototype.getEmail(){
+Users.prototype.getEmail = function(){
   return email;
 }
 
-Users.prototype.getPassword(){
+Users.prototype.getPassword = function(){
   return password;
 }
 
-Users.prototype.setUserName(){
+Users.prototype.setUserName = function(){
   this.userName = userName;
 }
 
-Users.prototype.setEmail(){
+Users.prototype.setEmail = function(){
   this.email = email;
 }
 
-Users.prototype.setPassword(){
+Users.prototype.setPassword = function(){
   this.password = password;
 }

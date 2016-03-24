@@ -5,10 +5,11 @@
 </head>
 <body>
     <script src="../core/data/playlists.js"></script>
-  <script src="signup.js"></script>
-
-  <script src="../core/data/users.js"></script>
-  <script src="songs.js"></script>
+    <script src="../core/data/users.js"></script>
+    <script src="threePlaylist.js"></script>
+    <script src="songs.js"></script>
+    <script src="signup.js"></script>
+    <script src="populatePlaylist.js"></script>
   <div id="top">
 
     <div id="logo">
@@ -76,11 +77,19 @@
               <h5 style="color: black;">Playing from:</h5>
               <h2>Up all night: The remixes radio</h2>
               <input onclick="closePlaylist()" type="button" value="Close" style="color:blue;height:4px;">
-            </div>
+            <!-- </div> -->
           </div>
 
           <div id="content">
-            <br><br><br><br><br><br><br>
+            <div id="divSong">
+              <div id="divSongImg">
+              </div>
+              <div id="divSongTitle">
+              </div>
+              <div id="divSongLength">
+              </div>
+              <div id="divSongListened">
+              </div>
           </div>
         </div>
 

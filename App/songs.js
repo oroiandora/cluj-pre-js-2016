@@ -1,7 +1,12 @@
 var playlistFromParse = JSON.parse(playlistsJSON);
+
+var currentPlaylist =  new Playlist(playlistFromParse[0]);
+
 function buildDomain() {
+
    for( var i = 0; i < playlistFromParse.length; i++ ) {
       playlist.push( new Playlist(playlistFromParse[i]) );
+      // create big playlist
    }
 
 }
