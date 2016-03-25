@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for App/populatePlaylist.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">App/</a> populatePlaylist.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.38% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.38% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var playlistFromParse = JSON.parse(playlistsJSON);
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function unhidePlaylist(){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    document.getElementById("playlist").style.visibility = "visible";</span>
+<span class="cstat-no" title="statement not covered" >    console.log(currentPlaylist);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var iDiv = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >    iDiv.id = 'content';</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById('content').appendChild(iDiv);</span>
+&nbsp;
+&nbsp;
+//create header
+<span class="cstat-no" title="statement not covered" >  for(var i = 0; i &lt; currentPlaylist.songs.length; i++){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var innerDiv = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.id = 'divSong';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      innerDiv.style.width="600px";</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.style.height="100px";</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.style.backgroundColor= "white";</span>
+<span class="cstat-no" title="statement not covered" >      iDiv.appendChild(innerDiv);</span>
+<span class="cstat-no" title="statement not covered" >      var song = new Song(currentPlaylist.songs[i]);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var image = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      image.innerHTML = '&lt;img src="'+song.getImage()+'"/&gt;';</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.appendChild(image);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var title = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      title.innerText = song.getSongTitle();</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.appendChild(title);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var author = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      author.innerText = song.getSongAuthor();</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.appendChild(author);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var length = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      length.innerText = song.getSongLength();</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.appendChild(length);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var listened = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >      listened.innerText = song.getSongListened();</span>
+<span class="cstat-no" title="statement not covered" >      innerDiv.appendChild(listened);</span>
+    }
+&nbsp;
+}
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function closePlaylist(){</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById("playlist").style.visibility = "hidden";</span>
+}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+// function Song(){
+//   console.log('!!!');
+//   this.image = image;
+//   this.songTitle = songTitle;
+//   this.songAuthor = songAuthor;
+//   this.songLength = songLength;
+//   this.songListened = songListened;
+//
+// };
+&nbsp;
+&nbsp;
+/*function Playlist(){
+  this.playlist = ;
+  this.songsArray = songs[i];
+}*/
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 25 2016 17:19:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

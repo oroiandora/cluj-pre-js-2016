@@ -7,6 +7,10 @@ function Playlist(path){
   for(var i = 0; i < path.songs.length; i++){
     this.songs.push(new Song(path.songs[i]));
   }
+
+
+
+
 }
 
 Playlist.prototype.getId = function(){
