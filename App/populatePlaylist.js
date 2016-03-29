@@ -6,43 +6,60 @@ function unhidePlaylist(){
     document.getElementById("playlist").style.visibility = "visible";
     console.log(currentPlaylist);
 
-    var iDiv = document.createElement('div');
-    iDiv.id = 'content';
-    document.getElementById('content').appendChild(iDiv);
+
+        var iDiv = document.createElement('div');
+        iDiv.id = 'content';
+        document.getElementById('content').appendChild(iDiv);
 
 
-//create header
-  for(var i = 0; i < currentPlaylist.songs.length; i++){
+    //create header
+      for(var i = 0; i < currentPlaylist.songs.length; i++){
 
-      var innerDiv = document.createElement('div');
-      innerDiv.id = 'divSong';
+          var innerDiv = document.createElement('div');
+          innerDiv.id = 'divSong';
 
-      innerDiv.style.width="600px";
-      innerDiv.style.height="100px";
-      innerDiv.style.backgroundColor= "white";
-      iDiv.appendChild(innerDiv);
-      var song = new Song(currentPlaylist.songs[i]);
+          innerDiv.style.width="600px";
+          innerDiv.style.height="100px";
+          innerDiv.style.backgroundColor= "white";
+          iDiv.appendChild(innerDiv);
+          var song = new Song(currentPlaylist.songs[i]);
 
-      var image = document.createElement('div');
-      image.innerHTML = '<img src="'+song.getImage()+'"/>';
-      innerDiv.appendChild(image);
+        function drawSongImage(){
+          var image = document.createElement('div');
+          image.innerHTML = '<img src="'+song.getImage()+'"/>';
+          innerDiv.appendChild(image);
+        }
+        drawSongImage();
 
-      var title = document.createElement('div');
-      title.innerText = song.getSongTitle();
-      innerDiv.appendChild(title);
+        function drawSongTitle(){
+          var title = document.createElement('div');
+          title.innerText = song.getSongTitle();
+          innerDiv.appendChild(title);
+        }
+        drawSongTitle();
 
-      var author = document.createElement('div');
-      author.innerText = song.getSongAuthor();
-      innerDiv.appendChild(author);
+        function drawSongAuthor(){
+          var author = document.createElement('div');
+          author.innerText = song.getSongAuthor();
+          innerDiv.appendChild(author);
+        }
+        drawSongAuthor();
 
-      var length = document.createElement('div');
-      length.innerText = song.getSongLength();
-      innerDiv.appendChild(length);
+        function drawSongLength(){
+          var length = document.createElement('div');
+          length.innerText = song.getSongLength();
+          innerDiv.appendChild(length);
+        }
+        drawSongLength();
 
-      var listened = document.createElement('div');
-      listened.innerText = song.getSongListened();
-      innerDiv.appendChild(listened);
-    }
+        function drawSongListened(){
+          var listened = document.createElement('div');
+          listened.innerText = song.getSongListened();
+          innerDiv.appendChild(listened);
+        }
+        drawSongListened();
+
+        }
 
 }
 

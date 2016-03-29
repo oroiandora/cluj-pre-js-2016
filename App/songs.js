@@ -2,23 +2,23 @@ var playlistFromParse = JSON.parse(playlistsJSON);
 
 var currentPlaylist =  new Playlist(playlistFromParse[0]);
 
-// function buildDomain() {
+function buildDomain() {
 
   //  for( var i = 0; i < playlistFromParse.length; i++ ) {
   //     playlist.push( new Playlist(playlistFromParse[i]) );
-  //     // create big playlist
+      // create big playlist
 
-  var currentPlaylist = playlistFromParse.map(function(obj){
-    playlist.push( new Playlist(obj) );
-    return obj;
-  });
+  // var currentPlaylist = playlistFromParse.map(function(obj){
+  //   playlist.push( new Playlist(obj) );
+  //   return playlist;
+  // });
+var playlist = playlistFromParse.map(function(val){
+  return new Playlist(val);
+});
 
-// var playlist = map(function(playlistFromParse){
-//     return new Playlist();
-// });
   //  }
 
-// }
+}
 
 function Song(path){
   this.image = path.image;
