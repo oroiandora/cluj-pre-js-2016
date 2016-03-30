@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="http://backbonejs.org/test/vendor/underscore.js"></script>
+        <script src="http://backbonejs.org/test/vendor/jquery.js"></script>
+        <script src="http://backbonejs.org/docs/js/jquery.lazyload.js"></script>
+        <script src="http://backbonejs.org/backbone.js"></script>
+        <script src="http://backbonejs.org/backbone-min.js"></script>
+
+
+
+
+      </head>
+
+      <body>
+        <script type="text/template" id="template-Song">
+          <div id = "divSong">
+            <div id = "divSongImg">
+              <img src = <%= songImage %> />
+            </div>
+            <span id = "SongTitle">
+              <%= songTitle %>
+            </span>
+            <span id = "SongAuthor">
+              <%= songAuthor %>
+            </span>
+            <span id = "SongLength">
+              <%= songLength %>
+            </span>
+            <span id = "SongListened">
+              <%= songListened %>
+            </span>
+          </div>
+        </script>
+
+          <script src="songs/songModel.js"></script>
+          <script src="songs/SongModelView.js"></script>
+          <p>Hello!</p>
+          <div id="page"></div>
+
+        <script type="text/javascript">
+        $(function(){
+          var response = [
+                          {
+                          songImage: "BackboneApp/songs/up-all-night.png",
+                          songTitle: "XXX",
+                          songAuthor: "lorem ipsum",
+                          songLength: 4,
+                          songListened: 10
+                          }
+                        ];
+                      var songModel = new SongModel();
+                      songModel.set(response);
+
+                      console.log(response);
+                      var pageView = new SongModelView({
+                      el: document.getElementById('page'),
+                      model: songModel
+                    });
+                    pageView.render();
+
+                  });
+          </script>
+      </body>
+</html>

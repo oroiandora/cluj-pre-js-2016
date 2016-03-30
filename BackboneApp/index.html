@@ -5,50 +5,66 @@
         <script src="http://backbonejs.org/docs/js/jquery.lazyload.js"></script>
         <script src="http://backbonejs.org/backbone.js"></script>
 
+        <script type=""></script>
+        <script type="text/javascript">
+
+        $(function(){
+          var response = [
+                        {
+                          id: "xxx",
+                          title: "XXX",
+                          song: "lorem ipsum",
+                          imageSmall: "../core/assets/up-all-night.png",
+                          imageLarge: "../core/assets/up-all-night.png",
+                          description:'lorem ipsum'
+                        },
+                        {
+                          id: "xxx",
+                          title: "XXX",
+                          song: "lorem ipsum",
+                          imageSmall: "../core/assets/up-all-night.png",
+                          imageLarge: "../core/assets/up-all-night.png",
+                          description:'lorem ipsum'
+                        },
+                        {
+                          id: "xxx",
+                          title: "XXX",
+                          song: "lorem ipsum",
+                          imageSmall: "../core/assets/up-all-night.png",
+                          imageLarge: "../core/assets/up-all-night.png",
+                          description:"lorem ipsum"
+                        }
+
+                      ];
+                      var playlistCollection = new PlaylistCollection();
+                      playlistCollection.set(response);
+                      console.log(response);
+                    var pageView = new PlaylistCollectionView({
+                      el: document.getElementById('page'),
+                      collection: playlistCollection
+                    });
+                    pageView.render();
+                  });
+
+        </script>
+
+
    </head>
+
     <body>
-      <script src=text/javascript>
-      $(function(){
-        var playlist = [
-                      {
-                        id: "xxx",
-                        title: "XXX",
-                        song: "lorem ipsum",
-                        imageSmall: "../core/assets/up-all-night.png",
-                        imageLarge: "../core/assets/up-all-night.png",
-                        description:'lorem ipsum'
-                      },
-                      {
-                        id: "xxx",
-                        title: "XXX",
-                        song: "lorem ipsum",
-                        imageSmall: "../core/assets/up-all-night.png",
-                        imageLarge: "../core/assets/up-all-night.png",
-                        description:'lorem ipsum'
-                      },
-                      {
-                        id: "xxx",
-                        title: "XXX",
-                        song: "lorem ipsum",
-                        imageSmall: "../core/assets/up-all-night.png",
-                        imageLarge: "../core/assets/up-all-night.png",
-                        description:"lorem ipsum"
-                      }
 
-                    ];
-
-      var PlaylistView = Backbone.View.extend({
-        tagName: 'div',
-        className: 'playlist-view',
-        render: function(){
-
-        }
-      })
+      <script src="songs/songModel.js"></script>
+      <script src="songs/songsCollection.js"></script>
+      <script src="Playlist/playlistModel.js"></script>
+      <script src="Playlist/playlistCollection.js"></script>
+      <script src="Playlist/PlaylistCollectionView.js"></script>
+      <script src="Playlist/PlaylistModelView.js"></script>
+      <script src="songs/SongModelView.js"></script>
+      <script src="songs/SongCollectionView.js"></script>
 
 
 
 
-      </script>
       <p>Hello!</p>
       <div id="page"></div>
     </body>

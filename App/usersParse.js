@@ -1,8 +1,8 @@
 var usersFromParse = JSON.parse(usersJSON);
 console.log(usersJSON);
- for(var i = 0; i<=usersFromParse.length; i++){
-  users.push( new Users(usersFromParse[i]) );
- }
+ // for(var i = 0; i<=usersFromParse.length; i++){
+ //  users.push( new Users(usersFromParse[i]) );
+ // }
 
 function Users(path){
   this.userName = path.userName;
