@@ -1,3 +1,3 @@
-var SongsCollection = Backbone.Collection.extend({
+var SongCollection = Backbone.Collection.extend({
   model: SongModel
 });

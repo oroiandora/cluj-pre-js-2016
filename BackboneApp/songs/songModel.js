@@ -6,5 +6,4 @@ var SongModel = Backbone.Model.extend({
     songLength: null,
     songListened: null
   }
-
 });

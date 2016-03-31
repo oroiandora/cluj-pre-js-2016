@@ -1,5 +1,8 @@
+import { Song } from './songs.js';
+import { currentPlaylist } from './threePlaylist.js';
+import { Playlist } from './threePlaylist.js';
+import { playlistJSON } from './threePlaylist.js';
 var playlistFromParse = JSON.parse(playlistsJSON);
-
 
 function unhidePlaylist(){
 
@@ -69,26 +72,5 @@ function closePlaylist(){
 }
 
 
-
-
-
-
-
-
-
-
-// function Song(){
-//   console.log('!!!');
-//   this.image = image;
-//   this.songTitle = songTitle;
-//   this.songAuthor = songAuthor;
-//   this.songLength = songLength;
-//   this.songListened = songListened;
-//
-// };
-
-
-/*function Playlist(){
-  this.playlist = ;
-  this.songsArray = songs[i];
-}*/
+export { unhidePlaylist };
+export { closePlaylist };

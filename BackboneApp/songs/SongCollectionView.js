@@ -1,22 +1,13 @@
-var SongCollectionView = Backbone.View.extend({
-  template: _.template("<p>List of songs</p><div class='song'></div><ul class='SongCollection-view'></ul>"),
-  _nestedView: [],
-  renderNestedView: function(view, el) {
-    this._nestedView.push(view);
-    el.append(view.el);
-  },
+const SongCollectionView = Backbone.View.extend({
+  idName: 'template-allSongs',
   render: function () {
-    this.$el.html(this.template());
+    this.$el.html(this.template);
     var that = this;
-    var partEl = $(this.el.querySelector('.SongCollection-view'));
-    this.collection.forEach(function(model) {
+    that.collection.forEach(function (model) {
       var songModelView = new SongModelView({
-        model: new SongModel()
+        model: model
       });
-      songModelView.render();
-      this.renderNestedView(songModelView, $(this.el.querySelector('.song')));
-      return this;
+      that.el.appendChild(songModelView.render().el);
     });
-}
-
+  }
 });

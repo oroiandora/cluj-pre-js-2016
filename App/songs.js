@@ -1,25 +1,3 @@
-var playlistFromParse = JSON.parse(playlistsJSON);
-
-var currentPlaylist =  new Playlist(playlistFromParse[0]);
-
-function buildDomain() {
-
-  //  for( var i = 0; i < playlistFromParse.length; i++ ) {
-  //     playlist.push( new Playlist(playlistFromParse[i]) );
-      // create big playlist
-
-  // var currentPlaylist = playlistFromParse.map(function(obj){
-  //   playlist.push( new Playlist(obj) );
-  //   return playlist;
-  // });
-var playlist = playlistFromParse.map(function(val){
-  return new Playlist(val);
-});
-
-  //  }
-
-}
-
 function Song(path){
   this.image = path.image;
   this.songTitle = path.songTitle;
@@ -70,12 +48,4 @@ function Song(path){
   };
 
 
-
-
-
-  /*Song.prototype.playCount(){
-    playCount = 0;
-    for( var i=0; i<=songLength[0].songs[i].length; i++){
-      playCount= songLength[i] + songLength[i+1];
-    }
-  }*/
+  export { Song };

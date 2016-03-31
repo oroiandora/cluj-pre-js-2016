@@ -5,37 +5,67 @@
         <script src="http://backbonejs.org/docs/js/jquery.lazyload.js"></script>
         <script src="http://backbonejs.org/backbone.js"></script>
         <script src="http://backbonejs.org/backbone-min.js"></script>
-
-
-
-
-      </head>
-
+    </head>
       <body>
-        <script type="text/template" id="template-Song">
-          <div id = "divSong">
-            <div id = "divSongImg">
-              <img src = <%= songImage %> />
-            </div>
-            <span id = "SongTitle">
-              <%= songTitle %>
-            </span>
-            <span id = "SongAuthor">
-              <%= songAuthor %>
-            </span>
-            <span id = "SongLength">
-              <%= songLength %>
-            </span>
-            <span id = "SongListened">
-              <%= songListened %>
-            </span>
+        <div id = "container">
+          <div id = "playlist-content">
+            <script type = "text/template" id = "template-Playlist">
+              <img src= <%= image %> />
+              <span id = "title"><%= title =%></span>
+            </script>
           </div>
-        </script>
+        </div>
 
-          <script src="songs/songModel.js"></script>
-          <script src="songs/SongModelView.js"></script>
-          <p>Hello!</p>
-          <div id="page"></div>
+        <div id ="newPlaylist">
+          <div1>
+            <img src = "..core/assets/up-all-night-small.png">
+          </div1>
+          <div2>
+            <h5>Playing from:</h5>
+            <h3>Up all night: The remixes radio</h3>
+          </div2>
+          <div3 id = "clear">
+          </div3>
+
+        <div id = 'pageContent'>
+          <div id = "divSong">
+            <script type="text/template" id="template-Song">
+
+              <div id = "divSongImg">
+                <img src = <%= songImage %> />
+              </div>
+
+              <span id = "SongTitle">
+                <%= songTitle %>
+              </span>
+
+              <span id = "SongAuthor">
+                <%= songAuthor %>
+              </span>
+
+              <span id = "SongLength">
+                <%= songLength %>
+              </span>
+
+              <span id = "SongListened">
+                <%= songListened %>
+              </span>
+            </div>
+          </script>
+
+        <p>Playlist</p>
+
+        <script src="songs/songModel.js"></script>
+        <script src="songs/SongModelView.js"></script>
+        <script src="songs/songsCollectionModel.js"></script>
+        <script src="songs/SongCollectionView.js"></script>
+        <script src="Playlist/playlistModel.js"></script>
+        <script src="Playlist/playlistCollectionModel.js"></script>
+        <script src="Playlist/PlaylistModelView.js"></script>
+        <script src="Playlist/PlaylistCollectionView.js"></script>
+
+        <p>Hello!</p>
+        <div id="page"></div>
 
         <script type="text/javascript">
         $(function(){
@@ -46,19 +76,58 @@
                           songAuthor: "lorem ipsum",
                           songLength: 4,
                           songListened: 10
-                          }
+                        },
+                        {
+                          songImage: "BackboneApp/songs/up-all-night.png",
+                          songTitle: "XXX",
+                          songAuthor: "lorem ipsum",
+                          songLength: 4,
+                          songListened: 10
+                        },
+                        {
+                          songImage: "BackboneApp/songs/up-all-night.png",
+                          songTitle: "XXX",
+                          songAuthor: "lorem ipsum",
+                          songLength: 4,
+                          songListened: 10
+                        }
                         ];
+
                       var songModel = new SongModel();
                       songModel.set(response);
-
                       console.log(response);
-                      var pageView = new SongModelView({
-                      el: document.getElementById('page'),
-                      model: songModel
-                    });
-                    pageView.render();
 
-                  });
+                      var songModelView = new SongModelView({
+                        el: document.getElementById('page'),
+                        model: songModel
+                      });
+                      songModelView.render();
+                      $('#pageContent').append(songModelView.el);
+
+                      var songCollection = new SongCollection();
+                      songCollection.set(response);
+                      var songCollectionView = new SongCollectionView({
+                        collection: songCollection
+                      });
+                      songCollectionView.render();
+                      $('#divSong').append(songCollectionView.el);
+
+                      var playlistModel = new PlaylistModel();
+                      playlistModel.set(response);
+                      var playlistModelView = new PlaylistModelView({
+                        model: playlistModel
+                      });
+                      playlistModelView.render();
+                      $('#playlistContent').append(playlistModelView.el);
+
+                      var playlistCollection = new PlaylistCollection();
+                      playlistCollection.set(response);
+                      var playlistCollectionView = new PlaylistCollectionView({
+                        collection: playlistCollection
+                      });
+                      playlistCollectionView.render();
+                      $('#playlistContent').append(playlistCollectionView.el);
+                    });
           </script>
       </body>
 </html>
