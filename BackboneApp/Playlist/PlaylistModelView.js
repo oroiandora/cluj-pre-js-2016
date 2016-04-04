@@ -17,3 +17,5 @@ var PlaylistModelView = Backbone.View.extend({
     return this;
   }
 });
+
+export { PlaylistModelView };

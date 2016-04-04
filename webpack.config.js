@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./App/entry.js",
+    entry: "./BackboneApp/entry.js",
     output: {
         path: __dirname+'/build/',
         filename: "bundle.js"

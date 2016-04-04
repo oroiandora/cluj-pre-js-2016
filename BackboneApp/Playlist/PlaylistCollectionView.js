@@ -1,13 +1,20 @@
+import { PlaylistModelView } from './PlaylistModelView.js';
 var PlaylistCollectionView = Backbone.View.extend({
-  idName: 'template-allPlaylists',
+ appendIndividualPlaylist(view){
+this.$el.append(view.el);
+ },
   render: function () {
-    this.$el.html(this.template());
       var that = this;
+      console.log(this.collection);
       this.collection.forEach(function(model) {
         var playlistModelView = new PlaylistModelView({
           model: model
         });
-        that.$el.append(playlistModelView.render().el);
+        playlistModelView.render();
+        that.$el.appendIndividualPlaylist(playlistModelView);
+
       });
     }
 });
+
+export{ PlaylistCollectionView };

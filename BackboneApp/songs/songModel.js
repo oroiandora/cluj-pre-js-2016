@@ -7,3 +7,4 @@ var SongModel = Backbone.Model.extend({
     songListened: null
   }
 });
+export { SongModel };
