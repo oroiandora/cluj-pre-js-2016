@@ -14,6 +14,8 @@ const PlaylistsCollection = Backbone.Collection.extend({
           imageSmall: playlistObject.imageSmall
         };
         const playlist = new PlaylistModel(attrs);
+                // const collectionSongs = new SongsCollection();
+                // playlist.setCollection(collectionSongs);
         return playlist;
       });
   }

@@ -1,4 +1,5 @@
 var PlaylistModelView = Backbone.View.extend({
+  className: 'playlist-card',
   renderTemplate: function (selectorString, options) {
     var templateText = document.querySelector(selectorString).innerText;
     var compiled = _.template(templateText);
@@ -9,7 +10,8 @@ var PlaylistModelView = Backbone.View.extend({
   },
 
   template: function(data){
-    return this.renderTemplate('#template-Playlist',data);
+
+    return this.renderTemplate('#template-allPlaylists',data);
   },
 
   render: function () {
